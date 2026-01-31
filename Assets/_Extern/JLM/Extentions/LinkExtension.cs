@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine.Events;
 
 
 public static class LinkExtension
@@ -28,7 +27,6 @@ public static class LinkExtension
 
         return list;
     }
-
 
     public static bool Contains<T>(this IEnumerable<T> ienum, Predicate<T> predicate)
     {
@@ -77,4 +75,13 @@ public static class LinkExtension
 
     public static int RemoveAll<T>(this List<T> list, T item)
         => list.RemoveAll((i) => i.Equals(item));
+
+    public static int IndexOf<T>(this T[] array, T item)
+    {
+        for (int i = 0; i < array.Length; i++)
+            if (Equals(array[i], item))
+                return i;
+
+        return -1;
+    }
 }

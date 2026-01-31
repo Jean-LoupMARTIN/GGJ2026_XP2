@@ -63,48 +63,6 @@ public static class UnityExtension
     {
         return Object.Instantiate(prefab, transform.position, transform.rotation, transform);
     }
-
-    public static void SetX(this Transform transform, float x)
-    {
-        Vector3 p = transform.position;
-        p.x = x;
-        transform.position = p;
-    }
-
-    public static void SetY(this Transform transform, float y)
-    {
-        Vector3 p = transform.position;
-        p.y = y;
-        transform.position = p;
-    }
-
-    public static void SetZ(this Transform transform, float z)
-    {
-        Vector3 p = transform.position;
-        p.z = z;
-        transform.position = p;
-    }
-
-    public static void AddX(this Transform transform, float x)
-    {
-        Vector3 p = transform.position;
-        p.x += x;
-        transform.position = p;
-    }
-
-    public static void AddY(this Transform transform, float y)
-    {
-        Vector3 p = transform.position;
-        p.y += y;
-        transform.position = p;
-    }
-
-    public static void AddZ(this Transform transform, float z)
-    {
-        Vector3 p = transform.position;
-        p.z += z;
-        transform.position = p;
-    }
 }
 
 

@@ -1,0 +1,1144 @@
+fileFormatVersion: 2
+guid: 2de884edf90fd4b43926d6b0057aa807
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9908722656743051
+    second: Windows_Logo_(1992-2001).svg_0
+  - first:
+      213: 8301572034364734523
+    second: Windows_Logo_(1992-2001).svg_1
+  - first:
+      213: -461671788698071083
+    second: Windows_Logo_(1992-2001).svg_2
+  - first:
+      213: -3663181571568461704
+    second: Windows_Logo_(1992-2001).svg_3
+  - first:
+      213: 6653369195014091124
+    second: Windows_Logo_(1992-2001).svg_4
+  - first:
+      213: 4817608752580732009
+    second: Windows_Logo_(1992-2001).svg_5
+  - first:
+      213: 6696766167833018357
+    second: Windows_Logo_(1992-2001).svg_6
+  - first:
+      213: 430397268150407588
+    second: Windows_Logo_(1992-2001).svg_7
+  - first:
+      213: -3975405491518990712
+    second: Windows_Logo_(1992-2001).svg_8
+  - first:
+      213: -539538505275885540
+    second: Windows_Logo_(1992-2001).svg_9
+  - first:
+      213: 1703989118371014493
+    second: Windows_Logo_(1992-2001).svg_10
+  - first:
+      213: -5749661888866444500
+    second: Windows_Logo_(1992-2001).svg_11
+  - first:
+      213: 9219664469781741196
+    second: Windows_Logo_(1992-2001).svg_12
+  - first:
+      213: -3735014488619990053
+    second: Windows_Logo_(1992-2001).svg_13
+  - first:
+      213: 4511057053873066629
+    second: Windows_Logo_(1992-2001).svg_14
+  - first:
+      213: -978197206257035309
+    second: Windows_Logo_(1992-2001).svg_15
+  - first:
+      213: -4046095608112765046
+    second: Windows_Logo_(1992-2001).svg_16
+  - first:
+      213: -8740461892938331275
+    second: Windows_Logo_(1992-2001).svg_17
+  - first:
+      213: -3177506101052175722
+    second: Windows_Logo_(1992-2001).svg_18
+  - first:
+      213: 1711568407427815837
+    second: Windows_Logo_(1992-2001).svg_19
+  - first:
+      213: 7930535446075585384
+    second: Windows_Logo_(1992-2001).svg_20
+  - first:
+      213: 2348822094884546604
+    second: Windows_Logo_(1992-2001).svg_21
+  - first:
+      213: -8390189840154276428
+    second: Windows_Logo_(1992-2001).svg_22
+  - first:
+      213: -956566163539931326
+    second: Windows_Logo_(1992-2001).svg_23
+  - first:
+      213: -4356487508101859834
+    second: Windows_Logo_(1992-2001).svg_24
+  - first:
+      213: 7717733766177884674
+    second: Windows_Logo_(1992-2001).svg_25
+  - first:
+      213: 1632208329900542703
+    second: Windows_Logo_(1992-2001).svg_26
+  - first:
+      213: 1373827837614851078
+    second: Windows_Logo_(1992-2001).svg_27
+  - first:
+      213: 4291735920687403634
+    second: Windows_Logo_(1992-2001).svg_28
+  - first:
+      213: -4648775051748891738
+    second: Windows_Logo_(1992-2001).svg_29
+  - first:
+      213: -8354569218288953868
+    second: Windows_Logo_(1992-2001).svg_30
+  - first:
+      213: -6169504727756260107
+    second: Windows_Logo_(1992-2001).svg_31
+  - first:
+      213: 3822736373129215801
+    second: Windows_Logo_(1992-2001).svg_32
+  - first:
+      213: -2376681848244946590
+    second: Windows_Logo_(1992-2001).svg_33
+  - first:
+      213: 145737579534469033
+    second: Windows_Logo_(1992-2001).svg_34
+  - first:
+      213: 2179654029777543529
+    second: Windows_Logo_(1992-2001).svg_35
+  - first:
+      213: 8124457310816869635
+    second: Windows_Logo_(1992-2001).svg_36
+  - first:
+      213: 1412589921148221110
+    second: Windows_Logo_(1992-2001).svg_37
+  - first:
+      213: 2070461185980666575
+    second: Windows_Logo_(1992-2001).svg_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_0
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1613
+        width: 83
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 571fdd9b11cccdff0800000000000000
+      internalID: -9908722656743051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_1
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 1524
+        width: 107
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3c70a918cb153370800000000000000
+      internalID: 8301572034364734523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_2
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 1467
+        width: 70
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df05d744ffc799f0800000000000000
+      internalID: -461671788698071083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_3
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1423
+        width: 137
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87897eed4c3c92dc0800000000000000
+      internalID: -3663181571568461704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_4
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 1372
+        width: 89
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47177542804855c50800000000000000
+      internalID: 6653369195014091124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_5
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 1345
+        width: 172
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964236cb2a59bd240800000000000000
+      internalID: 4817608752580732009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 1140
+        height: 1373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff7a814951bfec50800000000000000
+      internalID: 6696766167833018357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_7
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1268
+        width: 201
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a15768f80419f500800000000000000
+      internalID: 430397268150407588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_8
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1315
+        width: 70
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8869fdf94c584d8c0800000000000000
+      internalID: -3975405491518990712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1273
+        width: 117
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18b26a869c2388f0800000000000000
+      internalID: -539538505275885540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_10
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1219
+        width: 88
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57a2a53319c5a710800000000000000
+      internalID: 1703989118371014493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_11
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1196
+        width: 149
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b938f99f81530b0800000000000000
+      internalID: -5749661888866444500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_12
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 1122
+        width: 169
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e71a5ccf3d2ff70800000000000000
+      internalID: 9219664469781741196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_13
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1158
+        width: 83
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd34ede8c109a2cc0800000000000000
+      internalID: -3735014488619990053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_14
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1121
+        width: 117
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582df996d7e7a9e30800000000000000
+      internalID: 4511057053873066629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_15
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1065
+        width: 106
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d715c8d2debc62f0800000000000000
+      internalID: -978197206257035309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_16
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 1044
+        width: 147
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a87ab274b7169d7c0800000000000000
+      internalID: -4046095608112765046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_17
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 976
+        width: 168
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57b8292a734a3b680800000000000000
+      internalID: -8740461892938331275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_18
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1008
+        width: 70
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69a0627490b37e3d0800000000000000
+      internalID: -3177506101052175722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_19
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 964
+        width: 138
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d991485f566b0c710800000000000000
+      internalID: 1711568407427815837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_20
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 913
+        width: 89
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863bafd68fbee0e60800000000000000
+      internalID: 7930535446075585384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_21
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 886
+        width: 172
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28ae2e2041b89020800000000000000
+      internalID: 2348822094884546604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_22
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 811
+        width: 201
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd43832bce009b80800000000000000
+      internalID: -8390189840154276428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_23
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 854
+        width: 71
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f4b02742899b2f0800000000000000
+      internalID: -956566163539931326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_24
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 815
+        width: 117
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 606792b61b5aa83c0800000000000000
+      internalID: -4356487508101859834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_25
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 759
+        width: 89
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20a021458f5ea1b60800000000000000
+      internalID: 7717733766177884674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_26
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 738
+        width: 148
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feac72704d4c6a610800000000000000
+      internalID: 1632208329900542703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_27
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 665
+        width: 169
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6048393b321d01310800000000000000
+      internalID: 1373827837614851078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 699
+        width: 82
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2725b5ec41f4f8b30800000000000000
+      internalID: 4291735920687403634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_29
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 666
+        width: 116
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a32fcf78bb3c7fb0800000000000000
+      internalID: -4648775051748891738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_30
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 618
+        width: 219
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f559747f8b9e0c80800000000000000
+      internalID: -8354569218288953868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_31
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 605
+        width: 107
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fcbef53324816aa0800000000000000
+      internalID: -6169504727756260107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_32
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 590
+        width: 149
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ff4564a761d0530800000000000000
+      internalID: 3822736373129215801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_33
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 516
+        width: 170
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 269bd338374540fd0800000000000000
+      internalID: -2376681848244946590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_34
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 510
+        width: 137
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a7c3927e83c50200800000000000000
+      internalID: 145737579534469033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_35
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 432
+        width: 171
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 961a322bacfaf3e10800000000000000
+      internalID: 2179654029777543529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_36
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 467
+        width: 219
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d901401eedfb070800000000000000
+      internalID: 8124457310816869635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_37
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 356
+        width: 200
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b6365f8c078a9310800000000000000
+      internalID: 1412589921148221110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_Logo_(1992-2001).svg_38
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 308
+        width: 223
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc29c979a71cbbc10800000000000000
+      internalID: 2070461185980666575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Windows_Logo_(1992-2001).svg_0: -9908722656743051
+      Windows_Logo_(1992-2001).svg_1: 8301572034364734523
+      Windows_Logo_(1992-2001).svg_10: 1703989118371014493
+      Windows_Logo_(1992-2001).svg_11: -5749661888866444500
+      Windows_Logo_(1992-2001).svg_12: 9219664469781741196
+      Windows_Logo_(1992-2001).svg_13: -3735014488619990053
+      Windows_Logo_(1992-2001).svg_14: 4511057053873066629
+      Windows_Logo_(1992-2001).svg_15: -978197206257035309
+      Windows_Logo_(1992-2001).svg_16: -4046095608112765046
+      Windows_Logo_(1992-2001).svg_17: -8740461892938331275
+      Windows_Logo_(1992-2001).svg_18: -3177506101052175722
+      Windows_Logo_(1992-2001).svg_19: 1711568407427815837
+      Windows_Logo_(1992-2001).svg_2: -461671788698071083
+      Windows_Logo_(1992-2001).svg_20: 7930535446075585384
+      Windows_Logo_(1992-2001).svg_21: 2348822094884546604
+      Windows_Logo_(1992-2001).svg_22: -8390189840154276428
+      Windows_Logo_(1992-2001).svg_23: -956566163539931326
+      Windows_Logo_(1992-2001).svg_24: -4356487508101859834
+      Windows_Logo_(1992-2001).svg_25: 7717733766177884674
+      Windows_Logo_(1992-2001).svg_26: 1632208329900542703
+      Windows_Logo_(1992-2001).svg_27: 1373827837614851078
+      Windows_Logo_(1992-2001).svg_28: 4291735920687403634
+      Windows_Logo_(1992-2001).svg_29: -4648775051748891738
+      Windows_Logo_(1992-2001).svg_3: -3663181571568461704
+      Windows_Logo_(1992-2001).svg_30: -8354569218288953868
+      Windows_Logo_(1992-2001).svg_31: -6169504727756260107
+      Windows_Logo_(1992-2001).svg_32: 3822736373129215801
+      Windows_Logo_(1992-2001).svg_33: -2376681848244946590
+      Windows_Logo_(1992-2001).svg_34: 145737579534469033
+      Windows_Logo_(1992-2001).svg_35: 2179654029777543529
+      Windows_Logo_(1992-2001).svg_36: 8124457310816869635
+      Windows_Logo_(1992-2001).svg_37: 1412589921148221110
+      Windows_Logo_(1992-2001).svg_38: 2070461185980666575
+      Windows_Logo_(1992-2001).svg_4: 6653369195014091124
+      Windows_Logo_(1992-2001).svg_5: 4817608752580732009
+      Windows_Logo_(1992-2001).svg_6: 6696766167833018357
+      Windows_Logo_(1992-2001).svg_7: 430397268150407588
+      Windows_Logo_(1992-2001).svg_8: -3975405491518990712
+      Windows_Logo_(1992-2001).svg_9: -539538505275885540
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
