@@ -10,7 +10,7 @@ public class SelectSuspectButton : MonoBehaviour
 
     void Awake()
     {
-        GetComponent<Button>().onClick.AddListener(() => GameManager.Instance.SelectSuspect(idx));
+        //GetComponent<Button>().onClick.AddListener(() => VigilenceDirect.Instance.SelectSuspect(idx));
     }
 
     public void SetSelected(bool selected)

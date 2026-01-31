@@ -14,6 +14,8 @@ public class WriteText : MonoBehaviour
     [SerializeField] Vector2 dtRange = new Vector2(0f, 0.1f);
     TMP_Text tmpText;
 
+    [SerializeField, TextArea] string text;
+
     void Awake()
     {
         tmpText = GetComponent<TMP_Text>();
@@ -24,6 +26,8 @@ public class WriteText : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(Write(text));
     }
+
+    public void StartWriting() => StartWriting(text);
 
     IEnumerator Write(string text)
     {
@@ -48,7 +52,12 @@ public class WriteText : MonoBehaviour
             while (idx < lines.Length)
             {
                 yield return new WaitForSeconds(RandomExtension.Range(dtRange));
+                
+                if (idx > 0)
+                    tmpText.text += '\n';
+                
                 tmpText.text += lines[idx];
+                
                 idx++;
             }
         }
