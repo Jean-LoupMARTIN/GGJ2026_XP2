@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 
 public class SoundManager : Singleton<SoundManager>
 {
-    [SerializeField] Vector2 volumeRange = new Vector2(0.2f, 1);
+    [SerializeField] Vector2 volumeCrowdRange = new Vector2(0.2f, 1f);
+    [SerializeField] Vector2 volumeMusicRange = new Vector2(1f, 1f);
     [SerializeField] Vector2 shakeRange = new Vector2(3, 10);
     [SerializeField] Vector2 dtSoundRangeStart = new Vector2(3, 10);
     [SerializeField] Vector2 dtSoundRangeEnd = new Vector2(1, 5);
@@ -22,21 +23,35 @@ public class SoundManager : Singleton<SoundManager>
     [SerializeField] ShakeAdv shake;
 
     public AudioClip bootWindowsSound;
+    [SerializeField] GameObject frontScreen;
     [SerializeField] AudioClip clickSound, releaseSound;
+    [SerializeField, Range(0, 1)] float volumeClick = 1f;
     [SerializeField] float dtMinReleased = 0.1f;
 
-    AudioSource audioSource;
+    [SerializeField] AudioSource audioSourceCrowd;
+    [SerializeField] AudioSource audioSourceCrowd2;
+    [SerializeField] AudioSource audioSourceMusic;
+
+    [SerializeField] float timeFadeCrowd = 3;
+    [SerializeField] AudioClip[] randomSoundsOut;
+    [SerializeField] BombSound[] randomBombsOut;
+    bool isOut = false;
+
+
     VigilenceDirect vigilenceDirect;
+
+
 
     protected override void Awake()
     {
         base.Awake();
-        audioSource = GetComponent<AudioSource>();
         vigilenceDirect = FindAnyObjectByType<VigilenceDirect>(FindObjectsInactive.Include);
     }
 
-    void Start()
+    public void StartPlay()
     {
+        audioSourceCrowd.Play();
+        audioSourceMusic.Play();
         MatchCrtLevel();
         StartCoroutine(PlayRandomSoundsLoop());
         StartCoroutine(PlayRandomBombsLoop());
@@ -44,11 +59,15 @@ public class SoundManager : Singleton<SoundManager>
 
     void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current.leftButton.wasPressedThisFrame &&
+            !frontScreen.activeSelf)
         {
-            Play(clickSound);
+            Play(clickSound, volumeClick);
             StartCoroutine(PlayReleasedSound(dtMinReleased));
         }
+
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            Application.Quit();
     }
 
 
@@ -58,7 +77,8 @@ public class SoundManager : Singleton<SoundManager>
     {
         float t = Mathf.InverseLerp(0, vigilenceDirect.levels.Length-1, vigilenceDirect.crtLevelIdx);
         
-        audioSource.volume = volumeRange.Lerp(t);
+        audioSourceCrowd.volume = volumeCrowdRange.Lerp(t);
+        audioSourceMusic.volume = volumeMusicRange.Lerp(t);
 
         float shakeValue = shakeRange.Lerp(t);
         shake.CoefTarget = shakeValue;
@@ -76,7 +96,7 @@ public class SoundManager : Singleton<SoundManager>
         if (dt < dtMin)
             yield return new WaitForSeconds(dtMin - dt);
  
-        Play(releaseSound);
+        Play(releaseSound, volumeClick);
     }
 
     IEnumerator PlayRandomSoundsLoop()
@@ -89,8 +109,8 @@ public class SoundManager : Singleton<SoundManager>
             float dt = Vector2.Lerp(dtSoundRangeStart, dtSoundRangeEnd, lvlProgress).RandomInRange();
             yield return new WaitForSeconds(dt);
 
-            AudioClip clip = randomSounds.Where((c) => c != lastPlayed).PickRandom();
-            Play(clip, audioSource.volume);
+            AudioClip clip = (isOut ? randomSoundsOut : randomSounds).Where((c) => c != lastPlayed).PickRandom();
+            Play(clip, Mathf.Max(audioSourceCrowd.volume, audioSourceCrowd2.volume));
             lastPlayed = clip;
         }
     }
@@ -111,14 +131,41 @@ public class SoundManager : Singleton<SoundManager>
             float dt = Vector2.Lerp(dtBombRangeStart, dtBombRangeEnd, lvlProgress).RandomInRange();
             yield return new WaitForSeconds(dt);
 
-            BombSound bomb = randomBombs.Where((b) => b != lastBomb && vigilenceDirect.crtLevelIdx >= b.lvlMin).PickRandom();
-            float volume = audioSource.volume * bombVolumeRange.RandomInRange();
+            BombSound bomb = (isOut ? randomBombsOut : randomBombs).Where((b) => b != lastBomb && vigilenceDirect.crtLevelIdx >= b.lvlMin).PickRandom();
+            float volume = Mathf.Max(audioSourceCrowd.volume, audioSourceCrowd2.volume) * bombVolumeRange.RandomInRange();
             Play(bomb.clip, volume, bombPitchRange.RandomInRange());
             float shakeValue = bomb.shakeCoef * volume;
             shake.Coef += shakeValue * shakeCoefCoef;
             shake.Noise += shakeValue * shakeNoiseCoef;
             lastBomb = bomb;
         }
+    }
+
+    public void SetOut()
+    {
+        isOut = true;
+        StartCoroutine(FadeCrowd(timeFadeCrowd));
+    }
+
+    IEnumerator FadeCrowd(float time)
+    {
+        audioSourceCrowd2.volume = 0;
+        audioSourceCrowd2.Play();
+        audioSourceCrowd2.time = audioSourceCrowd.time;
+
+        float volumeTarget = audioSourceCrowd.volume;
+        float t = 0;
+
+        while (t < time)
+        {
+            yield return new WaitForEndOfFrame();
+            t+= Time.deltaTime;
+            float progress = Mathf.Min(t / time, 1);
+            audioSourceCrowd2.volume = progress * volumeTarget;
+            audioSourceCrowd.volume = (1 - progress) * volumeTarget;
+        }
+
+        audioSourceCrowd.Stop();
     }
 }
 
