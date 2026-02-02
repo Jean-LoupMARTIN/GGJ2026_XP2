@@ -6,14 +6,14 @@ public class VSRapportResult : MonoBehaviour
 {
     [SerializeField] TMP_Text tmpText;
     [SerializeField] Button closeButton;
-    [SerializeField, TextArea] string textValid, textWrong;
-    bool valid = false;
+    [SerializeField, TextArea] string textStart, textEnd;
+    [SerializeField, TextArea] string[] textValids;
+    [SerializeField, TextArea] string[] textWrongs;
+    [SerializeField] GameObject finalPopup;
 
-    void OnValidate()
-    {
-        if (tmpText)
-            tmpText.text = valid ? textValid : textWrong;
-    }
+
+    bool valid = false;
+    int textWrongsIdx = 0;
 
     void Awake()
     {
@@ -23,12 +23,30 @@ public class VSRapportResult : MonoBehaviour
     public void SetResult(bool valid)
     {
         this.valid = valid;
-        tmpText.text = valid ? textValid : textWrong;
+
+        if (valid)
+            tmpText.text = textStart + textValids[VigilenceDirect.Instance.crtLevelIdx] + textEnd;
+
+        else {
+            tmpText.text = textStart + textWrongs[textWrongsIdx] + textEnd;
+            textWrongsIdx++;
+            textWrongsIdx %= textWrongs.Length;
+        }
     }
 
     void OnClick()
     {
-        if (valid) VigilenceDirect.Instance.NextLevel();
         gameObject.SetActive(false);
+
+        if (valid)
+        {
+            if (VigilenceDirect.Instance.crtLevelIdx == VigilenceDirect.Instance.levels.Length - 1)
+            {
+                finalPopup.SetActive(true);
+                SoundManager.Instance.SetOut();
+            }
+
+            else VigilenceDirect.Instance.NextLevel();
+        }
     }
 }

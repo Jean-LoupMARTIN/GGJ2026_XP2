@@ -13,7 +13,9 @@ public class WriteText : MonoBehaviour
 
     [SerializeField] Vector2 dtRange = new Vector2(0f, 0.1f);
     [HideInInspector] public TMP_Text tmpText;
-
+    public AudioClip clip;
+    public AudioSource source;
+    
 
     void Awake()
     {
@@ -33,6 +35,9 @@ public class WriteText : MonoBehaviour
         int i = 0;
         float t = 0;
 
+        if (source)
+            source.Play();
+        
         if (mode == WriteMode.Char)
         {
             while (i < text.Length)
@@ -40,6 +45,9 @@ public class WriteText : MonoBehaviour
                 yield return new WaitForEndOfFrame();
                 t += Time.deltaTime;
                 
+                if (t > 0 && clip)
+                    AudioExtension.Play(clip);
+
                 while (t > 0 && i < text.Length)
                 {
                     t -= dtRange.RandomInRange();
@@ -57,6 +65,9 @@ public class WriteText : MonoBehaviour
                 yield return new WaitForEndOfFrame();
                 t += Time.deltaTime;
                 
+                if (t > 0 && clip)
+                    AudioExtension.Play(clip);
+
                 while (t > 0 && i < lines.Length)
                 {
                     t -= dtRange.RandomInRange();
@@ -66,5 +77,8 @@ public class WriteText : MonoBehaviour
                 }
             }
         }
+
+        if (source)
+            source.Stop();
     }
 }
