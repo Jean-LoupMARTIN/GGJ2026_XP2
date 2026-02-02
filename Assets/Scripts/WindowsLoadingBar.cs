@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class WindowsLoadingBar : Bar
 {
-    [SerializeField] Vector2 stepProgressRange = new Vector2(0.1f, 0.2f);
-    [SerializeField] Vector2 stepDtRange = new Vector2(0.1f, 0.2f);
-    [SerializeField] float waitStart = 0.5f;
-    [SerializeField] float waitEnd = 1;
-    [SerializeField] GameObject desableOnEnd;
+    [SerializeField] float timeToLoad = 2f;
+    [SerializeField] float timeToEnd = 2f;
+    [SerializeField] Vector2 dtStepRange = new Vector2(0.1f, 0.2f);
 
+    [SerializeField] GameObject desableOnEnd;
+    [SerializeField] GameObject activeOnEnd;
+    [SerializeField] float delayActive = 0.5f;
 
     void Start()
     {
@@ -19,18 +20,27 @@ public class WindowsLoadingBar : Bar
     {
         SetProgress(0);
 
-        yield return new WaitForSeconds(waitStart); 
+        yield return new WaitForEndOfFrame();
+
+        SoundManager.Instance.StartPlay();
+        float startTime = Time.time;
 
         while (Progress < 1)
         {
-            yield return new WaitForSeconds(stepDtRange.RandomInRange());
-            SetProgress(Progress + stepProgressRange.RandomInRange());
+            float loadTime = Time.time - startTime;
+            float restTime = timeToLoad - loadTime;
+            yield return new WaitForSeconds(Mathf.Min(dtStepRange.RandomInRange(), restTime));
+            loadTime = Time.time - startTime;
+            SetProgress(loadTime / timeToLoad);
         }
 
         AudioExtension.Play(SoundManager.Instance.bootWindowsSound);
 
-        yield return new WaitForSeconds(waitEnd); 
+        yield return new WaitForSeconds(timeToEnd); 
 
         desableOnEnd?.SetActive(false);
+        Invoke("ActiveOnEnd", delayActive);
     }
+
+    void ActiveOnEnd() => activeOnEnd.SetActive(true);
 }
