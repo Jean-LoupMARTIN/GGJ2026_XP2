@@ -153,7 +153,8 @@ public class SoundManager : Singleton<SoundManager>
         audioSourceCrowd2.Play();
         audioSourceCrowd2.time = audioSourceCrowd.time;
 
-        float volumeTarget = audioSourceCrowd.volume;
+        float volumeCrowdStart = audioSourceCrowd.volume;
+        float volumeMusicStart = audioSourceMusic.volume;
         float t = 0;
 
         while (t < time)
@@ -161,11 +162,13 @@ public class SoundManager : Singleton<SoundManager>
             yield return new WaitForEndOfFrame();
             t+= Time.deltaTime;
             float progress = Mathf.Min(t / time, 1);
-            audioSourceCrowd2.volume = progress * volumeTarget;
-            audioSourceCrowd.volume = (1 - progress) * volumeTarget;
+            audioSourceCrowd2.volume = progress * volumeCrowdStart;
+            audioSourceCrowd.volume = (1 - progress) * volumeCrowdStart;
+            audioSourceMusic.volume = (1 - progress) * volumeMusicStart;
         }
 
         audioSourceCrowd.Stop();
+        audioSourceMusic.Stop();
     }
 }
 
