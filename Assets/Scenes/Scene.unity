@@ -846,9 +846,9 @@ RectTransform:
   m_Father: {fileID: 1483059027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: -17}
+  m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &117532283
 MonoBehaviour:
@@ -1055,7 +1055,7 @@ GameObject:
   - component: {fileID: 148362996}
   - component: {fileID: 148362995}
   m_Layer: 5
-  m_Name: FrontScreen
+  m_Name: InitWindowsScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2199,9 +2199,9 @@ GameObject:
   m_Component:
   - component: {fileID: 399466475}
   - component: {fileID: 399466477}
+  - component: {fileID: 399466478}
   - component: {fileID: 399466476}
   - component: {fileID: 399466479}
-  - component: {fileID: 399466478}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -2237,7 +2237,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 5a62fcbf439ad48deac8165b26342805, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2333,68 +2333,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd83ff349572d451ab26e2372e3b0078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
-  volumeCrowdRange: {x: 0.2, y: 1}
-  volumeMusicRange: {x: 1, y: 0.8}
+  musicAS: {fileID: 399466478}
+  crowdInAS: {fileID: 399466476}
+  crowdOutAS: {fileID: 399466479}
+  musicVolume: {x: 1, y: 0.8}
+  crowdVolume: {x: 0.2, y: 1}
+  fadeTime: 2
+  shake: {fileID: 629542644}
   shakeRange: {x: 3, y: 6}
-  dtSoundRangeStart: {x: 4, y: 10}
-  dtSoundRangeEnd: {x: 2, y: 5}
-  dtBombRangeStart: {x: 0, y: 8}
-  dtBombRangeEnd: {x: 0, y: 4}
-  bombVolumeRange: {x: 0.7, y: 1}
-  bombPitchRange: {x: 0.8, y: 1.2}
-  shakeCoefCoef: 30
-  shakeNoiseCoef: 0.5
-  randomSounds:
+  fadeInOutTime: 3
+  waitToStartEvents: 10
+  dtEvents: {x: 5, y: -10}
+  eventsIn:
   - {fileID: 8300000, guid: cbb2e062adacd4794b2cd57f2c0e77a8, type: 3}
   - {fileID: 8300000, guid: bad0fd3615e4a4c5da0ef325be3a5dc2, type: 3}
   - {fileID: 8300000, guid: d05d4b1b97607456f8aec0314a26cabe, type: 3}
-  randomBombs:
-  - lvlMin: 1
-    clip: {fileID: 8300000, guid: 7c23ed2b393f44f1ebcbaac64ea8a9f0, type: 3}
-    shakeCoef: 1
-  - lvlMin: 1
-    clip: {fileID: 8300000, guid: 6b0957ecc59cf4693aa31f263a77da10, type: 3}
-    shakeCoef: 1
-  - lvlMin: 1
-    clip: {fileID: 8300000, guid: 22496ea78693e46589e297edebc5cd04, type: 3}
-    shakeCoef: 1
-  - lvlMin: 2
-    clip: {fileID: 8300000, guid: 048ed1eb63f194a20a059d90a08a862e, type: 3}
-    shakeCoef: 3
-  - lvlMin: 3
-    clip: {fileID: 8300000, guid: f6d9690af530645e9915b322fc64590e, type: 3}
-    shakeCoef: 8
-  shake: {fileID: 629542644}
-  bootWindowsSound: {fileID: 8300000, guid: 870fc8b105a304edcb8135643cd4da64, type: 3}
-  frontScreen: {fileID: 148362993}
-  clickSound: {fileID: 8300000, guid: d522871b7e5e444dc8628dd1fff8b59c, type: 3}
-  releaseSound: {fileID: 8300000, guid: df4cd0823df1541d58977934f1f5d74f, type: 3}
-  volumeClick: 1
-  dtMinReleased: 0.1
-  audioSourceCrowd: {fileID: 399466476}
-  audioSourceCrowd2: {fileID: 399466479}
-  audioSourceMusic: {fileID: 399466478}
-  timeFadeCrowd: 3
-  randomSoundsOut:
+  eventsOut:
   - {fileID: 8300000, guid: 3a77d9c6c9be449399c6cbed0b617411, type: 3}
   - {fileID: 8300000, guid: ae916b95d6a2d44d99b0334b77cbf867, type: 3}
   - {fileID: 8300000, guid: 67086113a866046dea3671a7f68b22e7, type: 3}
-  randomBombsOut:
+  bombsIn:
   - lvlMin: 1
-    clip: {fileID: 8300000, guid: 91478726c551042b0ae851e448e81d92, type: 3}
-    shakeCoef: 1.25
+    clip: {fileID: 8300000, guid: b350a550360a1411ebcbc21be4f4c957, type: 3}
+    shakeCoef: 1
   - lvlMin: 1
-    clip: {fileID: 8300000, guid: 92f14cf92b60a4b71bb58778f271e1d4, type: 3}
-    shakeCoef: 1.25
+    clip: {fileID: 8300000, guid: dd5ea1680b7ea4c008623c078d2b942a, type: 3}
+    shakeCoef: 1
   - lvlMin: 1
-    clip: {fileID: 8300000, guid: be27df69baabe4ec09a6734129bca5bd, type: 3}
-    shakeCoef: 1.25
+    clip: {fileID: 8300000, guid: 59249f03431aa4a2b9c92e6965a74ecc, type: 3}
+    shakeCoef: 1
   - lvlMin: 2
-    clip: {fileID: 8300000, guid: 7b1720edcdf7b4d7699acd49f65f8023, type: 3}
-    shakeCoef: 4
+    clip: {fileID: 8300000, guid: adde4b87ad00244978940a7fc4288db4, type: 3}
+    shakeCoef: 2
   - lvlMin: 3
-    clip: {fileID: 8300000, guid: b0b28d8a041924052871a8faeabbf5c0, type: 3}
-    shakeCoef: 10
+    clip: {fileID: 8300000, guid: 1f496be27b16342d994a26a13f5548b6, type: 3}
+    shakeCoef: 4
+  dtBombRangeStart: {x: 0, y: 7}
+  dtBombRangeEnd: {x: 0, y: 3}
+  bombCoefRange: {x: 0.8, y: 1}
+  bombPitchRange: {x: 0.8, y: 1.2}
+  bombShakeCoef: 50
+  bombShakeNoiseCoef: 2
+  initWindowsScreen: {fileID: 148362993}
+  windowsLaunch: {fileID: 8300000, guid: ddcc6b5608ee846ba85ab7afc8cab970, type: 3}
+  windowsLaunchVolume: 0.7
+  clickPressed: {fileID: 8300000, guid: d522871b7e5e444dc8628dd1fff8b59c, type: 3}
+  clickReleased: {fileID: 8300000, guid: df4cd0823df1541d58977934f1f5d74f, type: 3}
+  clickVolume: 1
+  clickReleasedDtMin: 0.1
 --- !u!82 &399466478
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2406,9 +2392,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 721e7e85b0e8a48b49de5af154620c14, type: 3}
+  m_Resource: {fileID: 8300000, guid: c5484df359db041e68032297b9688524, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4231,10 +4217,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1688879807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -11.505}
-  m_SizeDelta: {x: 126.5, y: 23.01}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &727849518
 MonoBehaviour:
@@ -4744,7 +4730,7 @@ RectTransform:
   m_Father: {fileID: 681574687}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5530,7 +5516,7 @@ RectTransform:
   m_Father: {fileID: 829305667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6357,13 +6343,13 @@ MonoBehaviour:
   textStart: "<b><u>Object : R\xE9sultat du rapport</u></b>\n\n\n"
   textEnd: "\n\n\n\nS\xE9curitairement,\L\nCommissaire Thierry Matrack"
   textValids:
-  - "Bien jou\xE9 minot !\n\nApr\xE8s une enqu\xEAte acharn\xE9e, des suspects \xE0
-    la pelle et quelques certitudes totalement infond\xE9es, t'as fini par identifier
+  - "Bien jou\xE9 minot !\n\nApr\xE8s une enqu\xEAte douteuse, des suspects \xE0
+    la pelle et quelques certitudes totalement infond\xE9es... t'as fini par identifier
     le bon suspect.\n\nIndividu incarc\xE9r\xE9. Dossier class\xE9. Ego satisfait.\LBeau
     travail. Je te laisse poursuivre avec la prochaine enqu\xEAte.\n\nLou\xE9e soit
     la brigade !\n\n\n<i>PS : Patrick, le responsable de la nomenclature op\xE9rationnelle,
     a renomm\xE9 notre brigade : la BITE (Brigade d'Intervention par Traitement \xC9lectronique)\LIl
-    faudrait vraiment songer \xE0 l'affecter \xE0 un autre poste, on va finir par
+    faudrait vraiment songer \xE0 l'affecter \xE0 un autre poste. On va finir par
     \xEAtre totalement ridicules si \xE7a continue\u2026</i>"
   - "Pas mal, je dirais m\xEAme TRES pas mal !\n\nEncore une incarc\xE9ration r\xE9ussie
     et surtout justifi\xE9e. Elles vont finir par toutes l'\xEAtre si tu continues
@@ -6371,18 +6357,18 @@ MonoBehaviour:
     pas des plaintes au cul \xE0 chaque arrestation \"abusive\".\nOn va finir par
     l'arr\xEAter lui, si \xE7a continue\u2026\n\nJe te laisse avec la prochaine enqu\xEAte.
     On compte sur toi.\n\n\n<i>PS : Le stagiaire a encore confondu la salle d'interrogatoire
-    avec la salle de pause et a propos\xE9 des caf\xE9s au suspect. Lorsqu'on s'en
+    avec la salle de pause et a propos\xE9 un caf\xE9 au suspect. Lorsqu'on s'en
     est rendu compte, il avait d\xE9j\xE0 bien entam\xE9 la r\xE9serve de biscuits\u2026
     Je vais voir si je peux pas lui rajouter quelques jours d'incarc\xE9ration.</i>"
   - "Que dire ? Tout simplement bravo !!\n\nT'as de la suite dans les id\xE9es !
     Je commence \xE0 me demander si t'es pas d\xE9j\xE0 en train de pr\xE9parer un
     plan pour prendre ma place.\n\n\xC0 ce rythme-l\xE0, je vais bient\xF4t devoir
-    m'inqui\xE9ter pour mon poste, demander une augmentation et faire semblant de
-    bosser encore plus\u2026 AHAHAH\n\nOn a un nouveau suspect \xE0 identifier, je
-    te laisse regarder \xE7a\u2026\n\n\n<i>PS : Je commence \xE0 m'inqui\xE9ter par
-    la tournure des \xE9v\xE9nements. Les manifs sont de plus en plus nombreuses,
-    et surtout de plus en plus violentes. Il ne fait pas bon de sortir en bleu de
-    travail de nos jours\u2026\nPrends soin de toi, minot.</i>"
+    demander une promotion et faire semblant de bosser encore plus\u2026 AHAHAH\n\nOn
+    a un nouveau suspect \xE0 identifier, je te laisse regarder \xE7a\u2026\n\n\n<i>PS
+    : Je commence \xE0 m'inqui\xE9ter par la tournure des \xE9v\xE9nements. Les manifs
+    sont de plus en plus nombreuses, et surtout de plus en plus violentes. Il ne
+    fait pas bon de sortir en bleu de travail de nos jours\u2026\nPrends soin de
+    toi, minot.</i>"
   - "Excellent travail !\n\nApr\xE8s avoir arr\xEAt\xE9 \xE0 peu pr\xE8s tout ce
     qui manifestait, le bon suspect a fini par \xE9merger.\LComme quoi, la m\xE9thode
     fonctionne : quand on embarque tout le monde, on tombe forc\xE9ment juste \xE0
@@ -6391,10 +6377,10 @@ MonoBehaviour:
     minot.\n\nLes manifestations grossissent. Elles deviennent plus nombreuses, plus
     bruyantes, plus\u2026 manifestueuses.\nM\xEAme les individus incarc\xE9r\xE9s
     commencent \xE0 s'agiter.\L\nComment peut-on \xEAtre contre l'ordre et la s\xE9curit\xE9
-    ?\LPeut-on arr\xEAter un individu s'il est d\xE9j\xE0 en cellule ?\LJe pars avec
-    tant de questions en t\xEAte\u2026\n\nLa brigade a plus que jamais besoin de
-    tes comp\xE9tences de d\xE9tective. Je te laisse la rel\xE8ve. \nLa brigade compte
-    sur toi\u2026"
+    ?\LPeut-on arr\xEAter un individu s'il est d\xE9j\xE0 en incarc\xE9r\xE9 ?\LJe
+    pars avec tant de questions en t\xEAte\u2026\n\nLa brigade a plus que jamais
+    besoin de tes comp\xE9tences de d\xE9tective. Je te laisse la rel\xE8ve. \nLa
+    brigade compte sur toi\u2026"
   textWrongs:
   - "On a coffr\xE9 le mauvais type\u2026\n\nCeci dit, on va quand m\xEAme le garder
     quelques jours en cellule, dans le doute\u2026\L\nComme on dit : un civil n'est
@@ -6975,52 +6961,49 @@ MonoBehaviour:
       picture: {fileID: 4465010981552335631, guid: 644ee3ea1b6754d8e8dccee70a37436d, type: 3}
     wantedNotice: "FICHE DE RECHERCHE OP\xC9RATIONNELLE : CIBLE \"CHLORO-STORM\"\n\nR\xC9F\xC9RENCE
       : BRVI-99/ALPHA\nSTATUT : PRIORITAIRE \u2013 INDIVIDU VIOLENT\n\n[PORTRAIT-ROBOT
-      VISUEL - DONN\xC9ES DE TERRAIN]\n\nMORPHOLOGIE / \xC2GE : \nLa soixantaine
-      environ. Profil de type \"Europ\xE9en\" ayant bascul\xE9 dans la radicalit\xE9.
-      Loin de l'image du retrait\xE9 paisible, cette personne est du genre \xE0 saboter
-      des chantiers.\n\nCHEVEUX : \nLors de la derni\xE8re interpellation, la cible
-      avait les cheveux longs et gris. Attention : la chevelure a pu \xEAtre dissimul\xE9e
-      sous un couvre-chef, voire ras\xE9e pour rendre l'identification impossible.\n\nD\xC9GUISEMENT
-      : \nIndividu masqu\xE9 (probablement par un cache-nez ou un foulard de r\xE9cup\xE9ration).
-      Le bas du visage est totalement invisible.\n\nMARQUEURS DE GROUPE : \nOp\xE8re
-      en meute. Les membres se ressemblent tous, mais cherchez la signature visuelle
-      du groupe : la cible porte un haut de couleur bleue (type bleu de travail ou
-      v\xEAtement de sport) et se d\xE9place lourdement charg\xE9e avec un sac \xE0
-      dos rouge (contenant probablement du mat\xE9riel de blocage).\n\nSIGNES DISTINCTIFS
-      : \nBrandit une pancarte pr\xF4nant explicitement la violence contre les forces
-      de l'ordre.\n\nLOCALISATION : \nZone non urbaine. Signalement confirm\xE9 en
-      milieu naturel (type ZAD ou zone foresti\xE8re).\n\n[CRIT\xC8RES D'EXCLUSION
-      (NE PAS INTERPELLER SI)]\n\nIgnorez les profils \"pacifistes\" qui l\xE8vent
-      les mains en l'air ; notre sujet est celui qui recherche activement le contact
-      physique et la confrontation."
+      VISUEL - DONN\xC9ES DE TERRAIN]\n\nMORPHOLOGIE / \xC2GE :\nLa soixantaine environ.
+      Profil de type \"europ\xE9en\" ayant bascul\xE9 dans la radicalit\xE9. Loin
+      de l'image du retrait\xE9 paisible, cette personne est du genre \xE0 saboter
+      des chantiers.\n\nCHEVEUX :\nLors de la derni\xE8re interpellation, la cible
+      avait les cheveux longs et gris. ATTENTION : la chevelure a pu \xEAtre dissimul\xE9e
+      sous un couvre-chef, voire ras\xE9e pour rendre son identification impossible.\n\nD\xC9GUISEMENT
+      :\nIndividu masqu\xE9 (probablement par un masque ou un cache-nez). Le bas
+      du visage est totalement invisible.\nLa cible porterait un haut de couleur
+      bleue, type v\xEAtement de sport, et se d\xE9place lourdement charg\xE9e avec
+      un sac \xE0 dos rouge contenant probablement du mat\xE9riel de blocage.\n\nSIGNES
+      DISTINCTIFS :\nBrandit une pancarte pr\xF4nant explicitement la violence contre
+      les forces de l'ordre.\n\nLOCALISATION :\nZone non urbaine. Signalement confirm\xE9
+      en milieu naturel (type ZAD ou zone foresti\xE8re).\n\n[CRIT\xC8RES D'EXCLUSION
+      (NE PAS INTERPELLER SI)]\n\nIgnorez les profils \"pacifistes\" : notre sujet
+      est celui qui recherche activement le contact physique et la confrontation.\n"
     answer: 1
   - suspects:
-    - thumbnail: {fileID: 21300000, guid: 3c77093ce07a04ae7ac86f7161dab6fb, type: 3}
+    - thumbnail: {fileID: 21300000, guid: 4835a37c68c4449eea4e284769f6dc0b, type: 3}
       picture: {fileID: 21300000, guid: e49182655d0dd4734a1cb9b78e7c062f, type: 3}
     - thumbnail: {fileID: 21300000, guid: 3fb10dd7f4a104dd584cc89864ce663e, type: 3}
       picture: {fileID: 21300000, guid: 7e03f9a596081446fbc51a9733aebf27, type: 3}
     - thumbnail: {fileID: 21300000, guid: 27cc85eb4e0a248739457b042d53f776, type: 3}
       picture: {fileID: 21300000, guid: 73523da388404426a9eb0a23a42bf9ec, type: 3}
-    - thumbnail: {fileID: 21300000, guid: 4835a37c68c4449eea4e284769f6dc0b, type: 3}
-      picture: {fileID: 21300000, guid: 3acaa6e05f4f749b89f639f0b0f86cca, type: 3}
+    - thumbnail: {fileID: 21300000, guid: 3c77093ce07a04ae7ac86f7161dab6fb, type: 3}
+      picture: {fileID: 21300000, guid: 1296c9b2070d347ef93b20dce98f5447, type: 3}
     wantedNotice: "FICHE DE RECHERCHE OP\xC9RATIONNELLE : CIBLE \"LETTREUR-REPY\"\n\nR\xC9F\xC9RENCE
       : BRVI-404/TAG\nSTATUT : PRIORITAIRE \u2013 VANDALISME POLITIQUE\n\n[PORTRAIT-ROBOT
-      VISUEL - DONN\xC9ES DE TERRAIN]\n\nMORPHOLOGIE / \xC2GE : \nXXX\n\nD\xC9GUISEMENT
-      : \nIndividu masqu\xE9, portant une casquette rouge. Il utilise souvent sa
-      capuche par-dessus pour briser sa silhouette.\n\nMARQUEURS DE GROUPE : \n\xC9volue
-      en solitaire. L'individu \xE9vite soigneusement les endroits trop expos\xE9s
-      et les cam\xE9ras. Contrairement aux autres, il ne vient pas pour ce montrer
-      il pr\xE9f\xE8re rester discret et furtif. en ce fondant dans la foule\n\nSIGNES
-      DISTINCTIFS : \nProfil de type vandaliseur. Il inscrit des lettrages militants
-      sur les fa\xE7ades des boutiques. La pr\xE9sence de mat\xE9riel de peinture
-      (bombes a\xE9rosols, pinceaux) ou de taches de peinture sur les mains et les
-      v\xEAtements facilitera l'identification.\n\nLOCALISATION : \nPlace de la R\xE9publique,
-      en plein coeur du rassemblement et de l'agitation politique.\n\n[CRIT\xC8RES
-      D'EXCLUSION (NE PAS INTERPELLER SI)]\n\nALERTE COMPORTEMENTALE : Ne pas engager
-      si l'individu devient violent contre les forces de l'ordre. Notre cible est
-      un d\xE9gradeur furtif, pas un \xE9meutier de contact. Si le suspect cherche
-      l'affrontement physique, il s'agit probablement d'un autre individu ou d'une
-      erreur de ciblage."
+      VISUEL - DONN\xC9ES DE TERRAIN]\n\nMORPHOLOGIE / \xC2GE :\n[NULL]\n\nD\xC9GUISEMENT
+      :\nL'individu \xE9tait masqu\xE9 : il dissimulait son identit\xE9 derri\xE8re
+      un masque clinique ou un foulard.\nIl arborait \xE9galement une casquette rouge
+      au moment des faits.\n\nMARQUEURS DE GROUPE :\nL'individu se dissimule dans
+      la foule pour \xE9chapper \xE0 nos regards et \xE0 ceux des cam\xE9ras. Contrairement
+      aux autres, il ne vient pas pour se montrer, mais pr\xE9f\xE8re rester discret
+      et furtif, en se fondant dans la foule.\n\nSIGNES DISTINCTIFS :\nProfil de
+      type \"vandaliseur\". Il inscrit des messages militants sur les fa\xE7ades
+      des boutiques. La pr\xE9sence de mat\xE9riel de peinture (bombes a\xE9rosols,
+      pinceaux) ou de taches de peinture sur les mains et les v\xEAtements facilitera
+      l'identification.\n\nLOCALISATION :\nPlace de la R\xE9publique, en plein coeur
+      des manifestations.\n\n[CRIT\xC8RES D'EXCLUSION (NE PAS INTERPELLER SI)]\n\nALERTE
+      COMPORTEMENTALE : Ne pas engager si l'individu devient violent contre les forces
+      de l'ordre. Notre cible est un d\xE9gradeur furtif, pas un \xE9meutier de contact.
+      Si le suspect cherche l'affrontement physique, il s'agit probablement du mauvais
+      individu\u2026\n"
     answer: 2
   - suspects:
     - thumbnail: {fileID: 21300000, guid: d2094fb3be4444cb7b858bda69c3e4b4, type: 3}
@@ -7033,20 +7016,18 @@ MonoBehaviour:
       picture: {fileID: 21300000, guid: 5cb7190c44f65494e9d530cbcaca9d06, type: 3}
     wantedNotice: "R\xC9F\xC9RENCE : BRVI-112/EPSILON\nSTATUT : PRIORITAIRE \u2013
       DANGER IMM\xC9DIAT\n\n[PORTRAIT-ROBOT VISUEL - DONN\xC9ES DE TERRAIN]\n\nMORPHOLOGIE
-      / \xC2GE : \nMasculin, d\xE9but de la trentaine. Profil athl\xE9tique.\n\nD\xC9GUISEMENT
-      : \nContrairement \xE0 la majorit\xE9 des manifestants, l'individu ne portait
-      pas de gilet jaune lors du d\xE9roulement des faits. Il cherche manifestement
-      \xE0 se distinguer de la masse civile pour une action cibl\xE9e.\n\nSIGNES
-      DISTINCTIFS : \n* L\u2019individu a \xE9t\xE9 surpris \xE0 de multiples reprises
-      en train de jeter des engins explosifs.\n*Il portait un masque \xE0 gaz professionnel.\n*
-      Il portait \xE9galement des gants, manifestement pour dissimuler ses mains.\n*
-      Il a \xE9galement emp\xEAcher les cyclistes de circuler toute la journ\xE9e,
-      en leur criant \"Hidalgo D\xE9mission\"\n\nLOCALISATION : \nAvenue des Champs-\xC9lys\xE9es,
-      identifi\xE9 directement sur les pav\xE9s de la chauss\xE9e.\n\n[CRIT\xC8RES
-      D'EXCLUSION (NE PAS INTERPELLER SI)]\n\nIMPORTANT : Ne pas interpeller si l'individu
-      porte un Sac. Les coll\xE8gues sont formels : le suspect ne portait aucun gilet
-      pendant toute la dur\xE9e des faits. Si le sujet en porte un, c'est probablement
-      une erreur d'identification ou un changement de tenue tactique. "
+      / \xC2GE :\nMasculin, d\xE9but de la trentaine, profil athl\xE9tique.\n\nD\xC9GUISEMENT
+      :\nL'individu \xE9tait totalement v\xEAtu de noir. Il se dissimulait sous une
+      capuche ou un couvre-chef de la susdite couleur.\n\nSIGNES DISTINCTIFS :\nIl
+      a \xE9t\xE9 surpris \xE0 de multiples reprises en train de jeter des engins
+      explosifs. Il cherche manifestement \xE0 se distinguer de la masse civile pour
+      une action cibl\xE9e.\n\nLOCALISATION :\nL'individu a \xE9t\xE9 identifi\xE9
+      sur une chauss\xE9e pav\xE9e.\nIl a \xE9galement emp\xEAch\xE9 de nombreux
+      cyclistes de circuler sur les pistes cyclables, en leur criant \"Hidalgo d\xE9mission\".\n\n[CRIT\xC8RES
+      D'EXCLUSION (NE PAS INTERPELLER SI)]\n\nNe pas interpeller si l'individu porte
+      un gilet jaune. Les coll\xE8gues sont formels : le suspect ne portait aucun
+      gilet pendant toute la dur\xE9e des faits. Si le sujet en porte un, c'est probablement
+      une erreur d'identification ou bien un changement de tenue strat\xE9gique.\n"
     answer: 2
   - suspects:
     - thumbnail: {fileID: 21300000, guid: 2f3bc5bbeff10439196db25fb7fecd42, type: 3}
@@ -7057,29 +7038,25 @@ MonoBehaviour:
       picture: {fileID: 21300000, guid: be3d67d25483f4e7e9d77604a2de607f, type: 3}
     - thumbnail: {fileID: 21300000, guid: 6081b1215939e408b83def7cdd720289, type: 3}
       picture: {fileID: 21300000, guid: 0d4205e62bcaa4ded84bd6c4f657eb44, type: 3}
-    wantedNotice: "[S_RRRRRRREUR_S] - FICHE_DE_RECC_CHHHH...\n\nSTATUT : [VALIDE]
-      - TOUT EST SOUS CONTR\xD4LE - [ERROR_404]\n\xC9METTEUR : PR\xC9FECTURE DE POLICE
-      (Backup d'Urgence #09)\nNOTE : LE PR\xC9FET RAPPELLE QUE LE CALME R\xC8GNE
-      DANS TOUS LES PALAIS R\xC9PUBLICAINS.\n\n[PORTRAIT-ROBOT VISUEL - DONN\xC9ES_CORROMPUES_88%]\n\nMORPHOLOGIE
-      / \xC2GE : \n1001101... Un visage dans la fum\xE9e. On dirait... [DATA_LOSS]
-      ...peut-\xEAtre tout le monde ? L'individu semble mesurer la taille de la col\xE8re
-      nationale. Impossible de distinguer l'\xE2ge, les pixels br\xFBlent.\n\nD\xC9GUISEMENT
-      : \nPorte des lambeaux de... [IDENTIFICATION_IMPOSSIBLE] ...on signale des
-      \xE9l\xE9ments de dorures du S\xE9nat sur les \xE9paules. Est-ce un v\xEAtement
-      ou un morceau de rideau ? Il/Elle semble briller comme un incendie.\n\nMARQUEURS
-      DE GROUPE : \nLe groupe est massif. Le groupe est le pays. [ERREUR_LOGIQUE]
-      : La base de donn\xE9es refuse de classer 100% de la population comme \"Suspecte\".\n\nSIGNES
-      DISTINCTIFS : \nTient un objet long, peut-\xEAtre une hampe de drapeau, ou
-      une barre de fer r\xE9cup\xE9r\xE9e dans les grilles de l'\xC9lys\xE9e. Le
-      sujet sourit \xE0 la cam\xE9ra. Pourquoi sourit-il ? [ANALYSE_PSY_IMPOSSIBLE].\n\nLOCALISATION
-      : \nPartout. Dans le bureau du Pr\xE9sident. Sur le tr\xF4ne de l'H\xE9micycle.
-      Dans les couloirs du pouvoir. [NOTE_SYSTEME] : Les cam\xE9ras du Palais ne
-      r\xE9pondent plus, elles ne transmettent que de la lumi\xE8re blanche.\n\n[CONSIGNES_DE_S\xC9CURIT\xC9]\n\nR-R-Rassurez
-      les citoyens : La R\xE9publique tient bon. * Ne pas \xE9couter les rumeurs
-      de fuite. Le Pr\xE9fet est dans son bunker, il d\xE9jeune normalement.\n\nSi
-      vous voyez cet individu... ou un autre... ou votre voisin... [CONSEIL_AGENT]
-      : D\xE9posez les armes et rentrez chez vous. Le service est... [TERMINATED].\n\n[DERN_MESSAGE_LOG]\n04:59:59
-      - SYS_ADMIN : \"C'est fini, Perrin. \xC9teins tout. Ils sont dans l'escalier.\""
+    wantedNotice: "[S_RRRRRRREUR_S] - FICHE_DE_RECC_CHHHH...\n\xC9METTEUR : PR\xC9FECTURE
+      DE POLICE (Backup d'Urgence #09)\LSTATUT : URGENT - GUERRE CIVILE [ERROR_404]\LNOTE
+      DU PREFET: \"la situation est parfaitement sous contr\xF4le.\"\n\n[PORTRAIT-ROBOT
+      VISUEL - DONN\xC9ES CORROMPUES 88 %]\n\nMORPHOLOGIE / \xC2GE :\LDonn\xE9es
+      biom\xE9triques : [NULL]\nAnalyse impossible...\n\nD\xC9GUISEMENT :\LL'individu
+      serait v\xEAtu d\u2019une tenue noire int\xE9gr\u2026 [DATA_LOSS] \u2026rait
+      une cagoule pour dissimuler son identit\xE9.\LIndividu vestimentairement agressif.\n\nLOCALISATION
+      :\LIntervention signal\xE9e dans un endroit clos de type int\xE9rieur.\L\n[NOTE_SYSTEM]
+      : Les syst\xE8mes de s\xE9curit\xE9 des sites gouvernementaux suivants ont
+      \xE9t\xE9 pirat\xE9s : \n- Palais de l'\xC9lys\xE9e \n- Palais du S\xE9nat
+      \LLes portes ne sont pas forc\xE9es. Les portes sont ouvertes\u2026 notre cible
+      pourrait s'y trouver !\n\nSIGNES DISTINCTIFS :\LL'individu tient \xE0 la main
+      un objet ample de grande taille : un grand drapeau, trop large pour \xEAtre
+      brandi, ou bien un rideau, arrach\xE9 \xE0 l'architecture m\xEAme du lieu.\n\nMARQUEURS
+      DE GROUPE :\LLe groupe est massif. Le groupe est\u2026 le pays [ERREUR_LOGIQUE]\nLa
+      base de donn\xE9es refuse de classer 100 % de la population comme \"suspecte\".\n\n[CRIT\xC8RES
+      D'EXCLUSION (NE PAS INTERPELLER SI)]\nAUCUN ! Consid\xE9rez tout individu comme
+      suspect potentiel\u2026\n\n[DERNIER_MESSAGE_LOG]\n16:42:11 - SYS_ADMIN : \"C'est
+      fini, Patrick. \xC9teins tout. Ils sont dans l'escalier\"."
     answer: 3
   crtLevel:
     suspects: []
@@ -8505,7 +8482,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -23, y: 23.01}
+  m_SizeDelta: {x: -23, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1688879808
 MonoBehaviour:
@@ -8729,15 +8706,16 @@ MonoBehaviour:
   m_text: "<b><u>Objet : Dissolution de la Police nationale</u></b>\n\n\nMessage
     de la Direction de la Police nationale, destin\xE9 \xE0 tous nos officiers ayant
     servi avec bravoure et fermet\xE9 :\n\nSuite aux r\xE9centes manifestations d'ampleur
-    in\xE9gal\xE9e, nous avons pris la d\xE9cision de dissoudre la Police nationale.\n\n\nMalgr\xE9
+    in\xE9gal\xE9e, <b>nous avons pris la d\xE9cision de dissoudre la Police nationale</b>.\n\n\nMalgr\xE9
     nos efforts constants et une certaine cr\xE9ativit\xE9 dans le maintien de l'ordre,
-    force est de constater que\u2026 \xE7a ne marche plus. Pire encore, \"taper sur
-    les gens\" n'est plus consid\xE9r\xE9 comme la solution \xE0 tous les probl\xE8mes.\n\nSi
-    nous ne pouvons plus taper sur les gens, sur qui allons-nous taper ?\u2026\n\n\nMerci
-    d'avoir cru, avec nous, qu\u2019en frappant un peu plus fort, tout finirait par
-    s'arranger.\nMalheureusement, notre cher pays n'est plus que l'ombre de lui-m\xEAme.\n\nEn
-    attendant de trouver un nouveau m\xE9tier o\xF9 frapper des gens reste autoris\xE9,
-    nous vous souhaitons une excellente continuation.\n\n\nCordialement,\n\nPatrick
+    force est de constater que\u2026 \xE7a n'a pas march\xE9. Pire encore, \"taper
+    sur les gens\" n'est plus consid\xE9r\xE9 comme la solution \xE0 tous nos probl\xE8mes.\n\nSi
+    nous ne pouvons plus taper sur les gens, sur qui allons-nous taper ?\u2026\n\n\nNous
+    vous remercions pour votre engagement et votre d\xE9votion.\nMerci d'avoir suivi
+    les consignes m\xEAme lorsqu\u2019elles n'avaient aucun sens, et d'avoir cru,
+    avec nous, que des m\xE9thodes simples pourraient r\xE9gler des probl\xE8mes
+    compliqu\xE9s.\n\nEn attendant de trouver un nouveau m\xE9tier o\xF9 taper sur
+    des gens reste socialement accept\xE9, nous vous souhaitons une excellente continuation.\n\n\n\nCordialement,\n\nPatrick
     Frapading, \nDirecteur de la Police nationale"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e9c199bf78dd4ef09d7161bc74adf10, type: 2}
@@ -8765,14 +8743,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -9150,7 +9128,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<b><u>Objet : Introduction du poste</u></b>\n\n\nSalut la bleusaille,\L\nBienvenue
+  m_text: "<b><u>Objet : Introduction du poste</u></b>\n\n\nSalut la bleusaille,\n\nBienvenue
     dans le service de reconnaissance faciale.\n\nDepuis les r\xE9centes coupes budg\xE9taires
     et l'explosion des prix de l'IA, notre abonnement \xE0 FIAC pour la reconnaissance
     faciale a \xE9t\xE9 suspendu. On compte donc sur nos jeunes pour faire correspondre
@@ -9158,8 +9136,8 @@ MonoBehaviour:
     cela, il te faut utiliser notre tout nouveau logiciel ASS (Assistance \xE0 la
     surveillance et \xE0 la s\xE9curisation), d\xE9velopp\xE9 en interne pour faire
     face \xE0 la crise.\n\nAttention, tu envoies les suspects en comparution imm\xE9diate
-    au tribunal correctionnel.\nTOUTE D\xC9CLARATION ABUSIVE FERA L'OBJET D'UN RAPPORT
-    EN INTERNE.\n\n\n\nS\xE9curitairement,\LCommissaire Thierry Matrack"
+    au tribunal correctionnel TOUTE D\xC9CLARATION ABUSIVE FERA L'OBJET D'UN RAPPORT
+    EN INTERNE.\n\n\n\nS\xE9curitairement,\nCommissaire Thierry Matrack"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e9c199bf78dd4ef09d7161bc74adf10, type: 2}
   m_sharedMaterial: {fileID: 7360334436231249555, guid: 0e9c199bf78dd4ef09d7161bc74adf10, type: 2}
@@ -10047,9 +10025,9 @@ RectTransform:
   m_Father: {fileID: 1483059027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -17}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1885730995
 MonoBehaviour:
@@ -11710,7 +11688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WindowsLoadingBar
   progress: 1
   fill: {fileID: 3784951288032453265}
-  timeToLoad: 3.4
+  timeToLoad: 3.35
   timeToEnd: 3.5
   dtStepRange: {x: 0, y: 0.5}
   desableOnEnd: {fileID: 148362993}

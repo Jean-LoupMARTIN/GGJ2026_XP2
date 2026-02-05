@@ -34,7 +34,7 @@ public class WindowsLoadingBar : Bar
             SetProgress(loadTime / timeToLoad);
         }
 
-        AudioExtension.Play(SoundManager.Instance.bootWindowsSound);
+        SoundManager.Instance.PlayWindowsLaunch();
 
         yield return new WaitForSeconds(timeToEnd); 
 

@@ -43,7 +43,7 @@ public class VSRapportResult : MonoBehaviour
             if (VigilenceDirect.Instance.crtLevelIdx == VigilenceDirect.Instance.levels.Length - 1)
             {
                 finalPopup.SetActive(true);
-                SoundManager.Instance.SetOut();
+                SoundManager.Instance.StartFadeInOut();
             }
 
             else VigilenceDirect.Instance.NextLevel();
