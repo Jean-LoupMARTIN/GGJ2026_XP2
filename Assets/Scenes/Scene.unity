@@ -2370,7 +2370,7 @@ MonoBehaviour:
     shakeCoef: 4
   dtBombRangeStart: {x: 0, y: 8}
   dtBombRangeEnd: {x: 0, y: 4}
-  bombCoefRange: {x: 0.8, y: 1}
+  bombCoefRange: {x: 0.4, y: 1}
   bombPitchRange: {x: 0.8, y: 1.2}
   bombShakeCoef: 50
   bombShakeNoiseCoef: 2
