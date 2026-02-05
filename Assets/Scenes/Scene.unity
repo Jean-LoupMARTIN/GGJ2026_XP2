@@ -2368,8 +2368,8 @@ MonoBehaviour:
   - lvlMin: 3
     clip: {fileID: 8300000, guid: 1f496be27b16342d994a26a13f5548b6, type: 3}
     shakeCoef: 4
-  dtBombRangeStart: {x: 0, y: 7}
-  dtBombRangeEnd: {x: 0, y: 3}
+  dtBombRangeStart: {x: 0, y: 8}
+  dtBombRangeEnd: {x: 0, y: 4}
   bombCoefRange: {x: 0.8, y: 1}
   bombPitchRange: {x: 0.8, y: 1.2}
   bombShakeCoef: 50
